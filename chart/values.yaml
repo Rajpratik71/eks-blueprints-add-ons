@@ -81,6 +81,7 @@ keda:
 kubeOpsView:
   enable: true
 
+
 # Metrics Server Values
 metricsServer:
   enable: false
