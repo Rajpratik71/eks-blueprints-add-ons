@@ -1,2 +1,3 @@
-arguments:
-- --set rbac.create=True
+kube-ops-view:
+  serviceAccount:
+    create: false

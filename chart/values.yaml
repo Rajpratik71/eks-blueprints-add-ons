@@ -80,6 +80,7 @@ keda:
 # Kube-ops-view
 kubeOpsView:
   enable: true
+  serviceAccountName:
 
 
 # Metrics Server Values

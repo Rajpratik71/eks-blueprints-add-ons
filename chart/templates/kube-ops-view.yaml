@@ -12,9 +12,13 @@ spec:
     repoURL: {{ .Values.repoUrl }}
     path: add-ons/kube-ops-view
     targetRevision: {{ .Values.targetRevision }}
+    helm:
+      parameters:
+      - name: kube-ops-view.serviceAccount.name
+        value: {{ .Values.kubernetesDashboard.serviceAccountName }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: argocd
   syncPolicy:
     automated:
       prune: false   
