@@ -1,3 +1,2 @@
-kube-ops-view:
-  serviceAccount:
-    create: false
+rbac:
+  create: true
