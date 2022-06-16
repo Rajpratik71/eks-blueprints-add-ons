@@ -13,6 +13,10 @@ agones:
 appMesh: 
   enable: false 
 
+#Atlantis Values
+atlantis: 
+  enable: false 
+
 # Calico Values
 awsCalico:
   enable: false
