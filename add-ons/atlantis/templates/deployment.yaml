@@ -17,11 +17,11 @@ spec:
       - name: dummy-secrets-sync
         image: k8s.gcr.io/echoserver:1.4
         volumeMounts:
-          - name: secrets-store
-            mountPath: "/mnt/secrets"
+          - name: atlantis-github-config
+            mountPath: "/mnt/atlantis-github-config"
             readOnly: true
       volumes:
-        - name: secrets-store
+        - name: atlantis-github-config
           csi:
             driver: secrets-store.csi.k8s.io
             readOnly: true
