@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-secrets-sync
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-secrets-sync
+  template:
+    metadata:
+      labels:
+        app: dummy-secrets-sync
+    spec:
+      containers:
+      - name: dummy-secrets-sync
+        image: k8s.gcr.io/echoserver:1.4
+        volumeMounts:
+          - name: secrets-store
+            mountPath: "/mnt/secrets"
+            readOnly: true
+      volumes:
+        - name: secrets-store
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: aws-secret-atlantis-github-secrets
