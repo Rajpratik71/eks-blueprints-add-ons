@@ -24,4 +24,4 @@ atlantis:
       allow_custom_workflows: true
   orgAllowlist: github.com/jamoroso-caylent/*
   storageClassName: gp2
-  env: dev
+env: dev
