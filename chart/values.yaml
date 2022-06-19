@@ -45,6 +45,10 @@ awsLoadBalancerController:
 awsOtelCollector:
   enable: false
 
+# AWS CSI secrets provider
+awsCsiProvider:
+  enable: false
+
 # Cert Manager Values
 certManager:
   enable: false
