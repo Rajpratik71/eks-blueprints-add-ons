@@ -1,12 +1,26 @@
+github:
+  user: jamoroso-caylent
+
+vcsSecretName: atlantis-github-secrets
 ingress:
   annotations: {
     alb.ingress.kubernetes.io/scheme: internet-facing,
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443},{"HTTP":80}]',
     alb.ingress.kubernetes.io/ssl-redirect: '443',
-    external-dns.alpha.kubernetes.io/hostname: jamoroso.com
+    external-dns.alpha.kubernetes.io/hostname: jamoroso.com,
+    alb.ingress.kubernetes.io/group.name: ci-cd-ingress,
+    kubernetes.io/ingress.class: alb
   }
-  host: jamoroso.com
+  host: atlantis.jamoroso.com
   tls:
     - hosts:
-      - jamoroso.com
-env : dev
+      - atlantis.jamoroso.com
+repoConfig: |
+  ---
+  repos:
+  - id: /.*/
+    apply_requirements: [approved, mergeable]
+    allowed_overrides: [apply_requirements, workflow]
+    allow_custom_workflows: true
+orgAllowlist: github.com/jamoroso-caylent/*
+storageClassName: gp2
