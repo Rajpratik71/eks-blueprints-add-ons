@@ -1,6 +1,5 @@
 github:
   user: jamoroso-caylent
-
 vcsSecretName: atlantis-github-secrets
 ingress:
   annotations: {
