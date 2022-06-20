@@ -15,7 +15,8 @@ appMesh:
 
 #Atlantis Values
 atlantis: 
-  enable: false 
+  enable: false
+  serviceAccountName:
 
 # Calico Values
 awsCalico:

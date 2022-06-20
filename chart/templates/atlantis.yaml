@@ -12,9 +12,13 @@ spec:
     repoURL: {{ .Values.repoUrl }}
     path: add-ons/atlantis
     targetRevision: {{ .Values.targetRevision }}
+    helm:
+      parameters:
+        - name: atlantis.serviceAccount.name
+          value: {{ .Values.atlantis.serviceAccountName }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: atlantis
   syncPolicy:
     automated:
       prune: true    
