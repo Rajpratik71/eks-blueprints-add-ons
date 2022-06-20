@@ -14,9 +14,9 @@ version: 0.1.0
 appVersion: "1.0"
 
 dependencies:
-- name: secrets-store-csi-driver
-  version: 1.1.1
-  repository: https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+# - name: secrets-store-csi-driver
+#   version: 1.1.1
+#   repository: https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 - name: csi-secrets-store-provider-aws
-  version: 0.0.1
+  version: 0.0.3
   repository: https://aws.github.io/eks-charts
