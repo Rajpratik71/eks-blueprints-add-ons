@@ -20,6 +20,17 @@ spec:
           - name: atlantis-github-config
             mountPath: "/mnt/atlantis-github-config"
             readOnly: true
+        env:
+          - name: test_env
+            valueFrom:
+              secretKeyRef:
+                name: atlantis-github-secrets
+                key: github_secret
+          - name: test_env_2
+            valueFrom:
+              secretKeyRef:
+                name: atlantis-github-secrets
+                key: github_token
       volumes:
         - name: atlantis-github-config
           csi:
