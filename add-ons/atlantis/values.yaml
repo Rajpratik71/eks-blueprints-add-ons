@@ -7,7 +7,7 @@ atlantis:
       alb.ingress.kubernetes.io/scheme: internet-facing,
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443},{"HTTP":80}]',
       alb.ingress.kubernetes.io/ssl-redirect: '443',
-      external-dns.alpha.kubernetes.io/hostname: jamoroso.com,
+      external-dns.alpha.kubernetes.io/hostname: atlantis.jamoroso.com,
       alb.ingress.kubernetes.io/group.name: ci-cd-ingress,
       kubernetes.io/ingress.class: alb
     }
