@@ -46,5 +46,5 @@ roleRef:
   kind: Role
   name: atlantis-role 
 subjects:
-  kind: ServiceAccount
+- kind: ServiceAccount
   name: {{.Values.atlantis.serviceAccount.name}} 
