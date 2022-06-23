@@ -1,4 +1,5 @@
 atlantis:
+  awsSecretName: atlantis-aws-secrets
   image:
     repository: jamorosocaylent/atlantis-aws-cli
     tag: 0.0.5
