@@ -48,3 +48,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{.Values.atlantis.serviceAccount.name}}
+  namespace: atlantis
