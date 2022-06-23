@@ -14,7 +14,7 @@ spec:
     targetRevision: {{ .Values.targetRevision }}
     helm:
       parameters:
-        - name: serviceAccountName
+        - name: testName
           value: {{ .Values.atlantis.serviceAccountName }}
   destination:
     server: https://kubernetes.default.svc

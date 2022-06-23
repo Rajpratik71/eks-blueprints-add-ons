@@ -1,4 +1,6 @@
 atlantis:
+  serviceAccount:
+    name: default
   awsSecretName: atlantis-aws-secrets
   image:
     repository: jamorosocaylent/atlantis-aws-cli

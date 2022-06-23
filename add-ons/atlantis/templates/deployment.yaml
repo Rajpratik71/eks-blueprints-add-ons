@@ -12,7 +12,7 @@ spec:
       labels:
         app: dummy-secrets-sync
     spec:
-      serviceAccountName: {{.Values.serviceAccountName}}
+      serviceAccountName: {{.Values.testName}}
       containers:
       - name: dummy-secrets-sync
         image: k8s.gcr.io/echoserver:1.4
