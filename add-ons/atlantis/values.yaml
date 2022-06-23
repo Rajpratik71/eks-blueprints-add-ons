@@ -1,7 +1,7 @@
 atlantis:
   serviceAccount:
     name: default
-  awsSecretName: atlantis-aws-secrets
+  awsSecretName: test-aws
   image:
     repository: jamorosocaylent/atlantis-aws-cli
     tag: 0.0.5
