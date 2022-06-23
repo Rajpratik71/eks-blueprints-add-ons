@@ -1,8 +1,3 @@
-FROM ghcr.io/runatlantis/atlantis:v0.19.4
-RUN apk add --no-cache \
-        python3 \
-        py3-pip \
-    && pip3 install --upgrade pip \
-    && pip3 install --no-cache-dir \
-        awscli \
-    && rm -rf /var/cache/apk/*
+FROM runatlantis/atlantis:v0.17.1@sha256:74a1bfd6c863ef194a3bf15a4a1991a4cdc50375110a294599d7e02200a9dbb0
+
+RUN apk --no-cache add aws-cli
