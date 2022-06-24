@@ -1,10 +1,7 @@
 atlantis:
-  # image:
-  #   repository: jamorosocaylent/atlantis-aws-cli
-  #   tag: 0.0.7
   image:
-    repository: chatwork/atlantis-aws
-    tag: latest
+    repository: jamorosocaylent/atlantis-aws-cli
+    tag: 0.0.8
   github:
     user: jamoroso-caylent
   vcsSecretName: atlantis-github-secrets
