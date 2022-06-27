@@ -1,7 +1,7 @@
 atlantis:
   image:
     repository: jamorosocaylent/atlantis-aws-cli
-    tag: 0.0.9
+    tag: latest
   github:
     user: jamoroso-caylent
   vcsSecretName: atlantis-github-secrets
@@ -26,5 +26,5 @@ atlantis:
       allowed_overrides: [apply_requirements, workflow]
       allow_custom_workflows: true
   orgAllowlist: github.com/jamoroso-caylent/*
-  # storageClassName: gp2
+  storageClassName: gp2
 env: dev
