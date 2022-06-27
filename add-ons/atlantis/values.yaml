@@ -1,7 +1,7 @@
 atlantis:
   image:
     repository: jamorosocaylent/atlantis-aws-cli
-    tag: latest
+    tag: 0.0.9
   github:
     user: jamoroso-caylent
   vcsSecretName: atlantis-github-secrets
