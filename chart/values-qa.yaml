@@ -40,7 +40,7 @@ awsForFluentBit:
 # AWS Load Balancer Controller Values
 awsLoadBalancerController:
   enable: true
-  serviceAccountName:
+  serviceAccountName: aws-load-balancer-controller-sa
 
 # AWS Otel Collector Values
 awsOtelCollector:
@@ -63,7 +63,7 @@ clusterAutoscaler:
 # External DNS Values
 externalDns:
   enable: true
-  serviceAccountName: 
+  serviceAccountName: external-dns-sa
   zoneIdFilter: jamoroso.com
 
 # Gatekeeper Values
