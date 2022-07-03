@@ -4,6 +4,10 @@ targetRevision: HEAD
 region: ""
 account: ""
 clusterName: ""
+env: qa
+destination:
+  server: https://kubernetes.default.svc
+  name: workload-clusters
 
 # Agones Values
 agones: 
@@ -143,7 +147,3 @@ kubeStateMetrics:
 kubernetesDashboard:
   enable: false
   serviceAccountName:
-
-destination:
-  server: test
-  name: workload-clusters

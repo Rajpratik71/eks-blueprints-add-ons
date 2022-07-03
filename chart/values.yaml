@@ -4,7 +4,11 @@ targetRevision: HEAD
 region: ""
 account: ""
 clusterName: ""
-
+env: ""
+destination:
+  server: https://kubernetes.default.svc
+  name: ''
+  
 # Agones Values
 agones: 
   enable: false 
@@ -144,6 +148,3 @@ kubernetesDashboard:
   enable: false
   serviceAccountName:
 
-destination:
-  server: https://kubernetes.default.svc
-  name: ''
