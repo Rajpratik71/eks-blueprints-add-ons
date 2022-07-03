@@ -4,7 +4,7 @@ targetRevision: HEAD
 region: ""
 account: ""
 clusterName: ""
-env: qa
+env: qa-
 destination:
   server: ''
   name: workload-clusters
