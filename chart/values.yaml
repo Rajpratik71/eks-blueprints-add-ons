@@ -144,4 +144,6 @@ kubernetesDashboard:
   enable: false
   serviceAccountName:
 
-argocdServer: https://kubernetes.default.svc
+destination:
+  server: https://kubernetes.default.svc
+  name: ''
