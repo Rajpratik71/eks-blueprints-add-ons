@@ -143,3 +143,5 @@ kubeStateMetrics:
 kubernetesDashboard:
   enable: false
   serviceAccountName:
+
+argocdServer: https://kubernetes.default.svc
