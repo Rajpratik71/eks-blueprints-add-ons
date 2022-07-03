@@ -145,5 +145,5 @@ kubernetesDashboard:
   serviceAccountName:
 
 destination:
-  server: ''
+  server: test
   name: workload-clusters
