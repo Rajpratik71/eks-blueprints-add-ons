@@ -6,7 +6,7 @@ account: ""
 clusterName: ""
 env: qa
 destination:
-  server: https://kubernetes.default.svc
+  server: ''
   name: workload-clusters
 
 # Agones Values
