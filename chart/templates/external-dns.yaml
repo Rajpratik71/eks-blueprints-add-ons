@@ -21,8 +21,8 @@ spec:
       - name: external-dns.zoneIdFilters[0]
         value: {{ .Values.externalDns.zoneIdFilter }}
   destination:
-    {{ if .Values.destination.server }} server: {{ .Values.destination.server }} {{ end }}
-    {{ if .Values.destination.name }} name: {{ .Values.destination.name }} {{ end }}
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: external-dns
   syncPolicy:
     automated:
