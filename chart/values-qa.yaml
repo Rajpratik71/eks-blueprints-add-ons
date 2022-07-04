@@ -68,7 +68,7 @@ clusterAutoscaler:
 externalDns:
   enable: true
   serviceAccountName: external-dns-sa
-  zoneIdFilter: jamoroso.com
+  zoneIdFilter: Z08753113IBKZ7SGL2Q7Q
 
 # Gatekeeper Values
 gatekeeper: 
