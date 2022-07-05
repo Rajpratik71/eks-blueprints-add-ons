@@ -2,7 +2,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aws-cloudwatch-metrics 
+  {{ if .Values.env }}
+  name: {{ .Values.env }}-aws-cloudwatch-metrics
+  {{ else }}
+  name: aws-cloudwatch-metrics
+  {{ end }}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io    
@@ -19,7 +23,8 @@ spec:
       - name: aws-cloudwatch-metrics.serviceAccount.name
         value: {{ .Values.awsCloudWatchMetrics.serviceAccountName }}        
   destination:
-    server: https://kubernetes.default.svc
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: amazon-cloudwatch
   syncPolicy:
     automated:

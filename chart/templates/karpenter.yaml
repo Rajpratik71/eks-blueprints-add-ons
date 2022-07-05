@@ -2,7 +2,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  {{ if .Values.env }}
+  name: {{ .Values.env }}-karpenter
+  {{ else }}
   name: karpenter
+  {{ end }}
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -23,7 +27,8 @@ spec:
         - name: karpenter.aws.defaultInstanceProfile
           value: {{ .Values.karpenter.awsDefaultInstanceProfile }}
   destination:
-    server: https://kubernetes.default.svc
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: karpenter
   syncPolicy:
     automated:

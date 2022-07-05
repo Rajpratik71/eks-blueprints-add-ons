@@ -2,7 +2,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.env }}metrics-server 
+  {{ if .Values.env }}
+  name: {{ .Values.env }}-metrics-server
+  {{ else }}
+  name: metrics-server
+  {{ end }}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io    

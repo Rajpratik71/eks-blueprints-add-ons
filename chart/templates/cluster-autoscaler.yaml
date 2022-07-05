@@ -2,7 +2,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-autoscaler 
+  {{ if .Values.env }}
+  name: {{ .Values.env }}-cluster-autoscaler
+  {{ else }}
+  name: cluster-autoscaler
+  {{ end }}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io    
@@ -21,7 +25,8 @@ spec:
       - name: cluster-autoscaler.autoDiscovery.clusterName
         value: {{ .Values.clusterName }}
   destination:
-    server: https://kubernetes.default.svc
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: kube-system
   syncPolicy:
     automated:

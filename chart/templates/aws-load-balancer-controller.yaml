@@ -2,7 +2,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.env }}aws-load-balancer-controller
+  {{ if .Values.env }}
+  name: {{ .Values.env }}-aws-load-balancer-controller
+  {{ else }}
+  name: aws-load-balancer-controller
+  {{ end }}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io    
