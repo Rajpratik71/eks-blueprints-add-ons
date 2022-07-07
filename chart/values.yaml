@@ -5,7 +5,7 @@ region: ""
 account: ""
 clusterName: ""
 
-# Agones Values
+# Grafana Values
 grafana: 
   enable: false 
 
