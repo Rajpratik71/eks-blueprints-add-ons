@@ -1,9 +1,13 @@
 # Global Values
-repoUrl: "https://github.com/aws-samples/eks-blueprints-add-ons.git"
+repoUrl: "https://github.com/ka1h/eks-blueprints-add-ons.git"
 targetRevision: HEAD
 region: ""
 account: ""
 clusterName: ""
+
+# Agones Values
+grafana: 
+  enable: false 
 
 # Agones Values
 agones: 
