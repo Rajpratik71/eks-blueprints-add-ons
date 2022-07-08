@@ -7,6 +7,14 @@ clusterName: ""
 
 # Grafana Values
 grafana: 
+  enable: false
+
+# Promtail Values
+promtail: 
+  enable: false 
+
+# Loki Values
+loki: 
   enable: false 
 
 # Agones Values
