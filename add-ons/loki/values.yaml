@@ -1,0 +1,10 @@
+nodeSelector:
+  kubernetes.io/os: linux
+
+persistence:
+  type: pvc
+  enabled: true
+  storageClassName: gp2
+  accessModes:
+    - ReadWriteOnce
+  size: 50Gi
