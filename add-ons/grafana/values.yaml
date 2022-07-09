@@ -2,6 +2,7 @@ grafana:
   #Enabling IRSA module for extending the data sources to CloudWatch
   serviceAccount:
     create: false
+    name: grafana
 
   resources:
     limits:
