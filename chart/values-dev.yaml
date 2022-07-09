@@ -83,7 +83,7 @@ karpenter:
   enable: true
   serviceAccountName: karpenter
   controllerClusterEndpoint: https://7B615BF27C412509E001EAC89A138D4E.gr7.us-east-1.eks.amazonaws.com
-  awsDefaultInstanceProfile: workload-dev-workload-dev-mang-ng
+  awsDefaultInstanceProfile: 
 
 # Keda Values
 keda: 
