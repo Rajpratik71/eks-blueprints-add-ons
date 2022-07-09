@@ -80,10 +80,10 @@ ingressNginx:
 
 # Karpenter Values
 karpenter: 
-  enable: false
-  serviceAccountName:
-  controllerClusterEndpoint:
-  awsDefaultInstanceProfile:
+  enable: true
+  serviceAccountName: karpenter
+  controllerClusterEndpoint: https://C153F7A6CDDE85D2EA334AF8C9DD207D.yl4.us-east-1.eks.amazonaws.com
+  awsDefaultInstanceProfile: workload-dev-workload-dev-mang-ng
 
 # Keda Values
 keda: 
