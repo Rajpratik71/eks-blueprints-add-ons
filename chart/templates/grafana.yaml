@@ -17,6 +17,7 @@ spec:
     namespace: grafana
   syncPolicy:
     automated:
+      allowEmpty: true
       prune: true
     syncOptions:
     - CreateNamespace=true
