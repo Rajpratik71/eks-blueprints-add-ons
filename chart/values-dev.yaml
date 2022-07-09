@@ -43,8 +43,8 @@ awsForFluentBit:
 
 # AWS Load Balancer Controller Values
 awsLoadBalancerController:
-  enable: true
-  serviceAccountName: aws-load-balancer-controller-sa
+  enable: false
+  serviceAccountName:
 
 # AWS Otel Collector Values
 awsOtelCollector:
