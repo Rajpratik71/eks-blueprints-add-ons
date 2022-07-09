@@ -51,7 +51,7 @@ grafana:
         isDefault: true
       - name: Loki
         type: loki
-        url: http://loki.loki.svc.cluster.local
+        url: http://loki.loki.svc.cluster.local:3100
         access: proxy
       - name: CloudWatch
         type: cloudwatch
