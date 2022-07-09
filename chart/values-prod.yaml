@@ -3,11 +3,11 @@ repoUrl: "https://github.com/jamoroso-caylent/eks-blueprints-add-ons.git"
 targetRevision: HEAD
 region: "us-east-1"
 account: "321852949023"
-clusterName: dev-workload
-env: dev
+clusterName: prod-workload
+env: prod
 destination:
   server: ''
-  name: dev-workload
+  name: prod-workload
 
 # Agones Values
 agones: 
