@@ -1,7 +1,5 @@
 consul:
   global:
     name: consul
-  connectInject:
-    enabled: true
   controller:
     enabled: true
