@@ -82,7 +82,7 @@ ingressNginx:
 karpenter: 
   enable: true
   serviceAccountName: karpenter
-  controllerClusterEndpoint: https://7B615BF27C412509E001EAC89A138D4E.gr7.us-east-1.eks.amazonaws.com
+  controllerClusterEndpoint: https://F5540452127A07FC2DBF50C48C8D5613.gr7.us-east-1.eks.amazonaws.com
   awsDefaultInstanceProfile: 
 
 # Keda Values
