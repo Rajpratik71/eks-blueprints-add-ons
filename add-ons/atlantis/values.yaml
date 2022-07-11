@@ -28,3 +28,4 @@ atlantis:
   orgAllowlist: github.com/jamoroso-caylent/*
   storageClassName: gp2
 env: dev
+awsSecretName: atlantis-github-config
