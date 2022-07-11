@@ -5,6 +5,10 @@ region: ""
 account: ""
 clusterName: ""
 
+# Consul Values
+consul: 
+  enable: false
+
 # Grafana Values
 grafana: 
   enable: false
