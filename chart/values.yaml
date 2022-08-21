@@ -7,7 +7,7 @@ clusterName: ""
 
 # Consul Values
 consul: 
-  enable: false
+  enable: true
 
 # Grafana Values
 grafana: 
@@ -15,11 +15,11 @@ grafana:
 
 # Promtail Values
 promtail: 
-  enable: false 
+  enable: true 
 
 # Loki Values
 loki: 
-  enable: false 
+  enable: true 
 
 # Agones Values
 agones: 
