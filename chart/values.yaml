@@ -114,6 +114,11 @@ keda:
   enable: false
   serviceAccountName:
 
+# Kube-ops-view
+kubeOpsView:
+  enable: true
+  serviceAccountName:
+
 # Metrics Server Values
 metricsServer:
   enable: false
