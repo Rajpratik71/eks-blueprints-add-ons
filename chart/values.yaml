@@ -176,7 +176,7 @@ prometheus:
   roleArn:
   ampWorkspaceUrl:
 
-# Metrics Server Values
+# Spark Operator Values
 sparkOperator:
   enable: false
   createNamespace: true
@@ -282,6 +282,11 @@ consul:
   
 velero:
   enable: false
+
+# Kubernetes Secrets Store CSI Driver
+secretsStoreCsiDriver:
+  enable: false
+  serviceAccountName:
 
 opentelemetryCollector:
   enable: false
