@@ -22,7 +22,8 @@ spec:
       - name: aws-cloudwatch-metrics.serviceAccount.name
         value: {{ .Values.awsCloudWatchMetrics.serviceAccountName }}
   destination:
-    server: https://kubernetes.default.svc
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: amazon-cloudwatch
   syncPolicy:
     automated:

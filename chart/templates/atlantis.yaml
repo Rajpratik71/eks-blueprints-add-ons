@@ -1,0 +1,31 @@
+{{- if and (.Values.atlantis) (.Values.atlantis.enable) -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: atlantis 
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io    
+spec:
+  project: default
+  source:
+    repoURL: {{ .Values.repoUrl }}
+    path: add-ons/atlantis
+    targetRevision: {{ .Values.targetRevision }}
+    helm:
+      parameters:
+        - name: atlantis.serviceAccount.name
+          value: {{ .Values.atlantis.serviceAccountName }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: atlantis
+  syncPolicy:
+    automated:
+      prune: true    
+    retry:
+      limit: 1
+      backoff:
+        duration: 5s 
+        factor: 2 
+        maxDuration: 1m  
+{{- end -}}

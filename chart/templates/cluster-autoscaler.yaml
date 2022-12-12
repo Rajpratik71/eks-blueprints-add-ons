@@ -24,7 +24,8 @@ spec:
       - name: cluster-autoscaler.autoDiscovery.clusterName
         value: {{ .Values.clusterName }}
   destination:
-    server: https://kubernetes.default.svc
+    {{ if .Values.destination.server }}server: {{ .Values.destination.server }} {{ end }}
+    {{ if .Values.destination.name }}name: {{ .Values.destination.name }} {{ end }}
     namespace: kube-system
   syncPolicy:
     automated:
