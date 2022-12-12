@@ -144,7 +144,7 @@ prometheus:
   roleArn:
   ampWorkspaceUrl:
 
-# Metrics Server Values
+# Spark Operator Values
 sparkOperator:
   enable: false
 
@@ -234,3 +234,8 @@ nvidiaDevicePlugin:
 
 velero:
   enable: false
+
+# Kubernetes Secrets Store CSI Driver
+secretsStoreCsiDriver:
+  enable: false
+  serviceAccountName:
