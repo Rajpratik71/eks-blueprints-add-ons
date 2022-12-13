@@ -13,6 +13,11 @@ agones:
 appMesh:
   enable: false
 
+#Atlantis Values
+atlantis: 
+  enable: false
+  serviceAccountName:
+
 # Calico Values
 calico:
   enable: false
