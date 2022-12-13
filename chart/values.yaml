@@ -18,6 +18,11 @@ appMesh:
   enable: false 
   createNamespace: true
 
+#Atlantis Values
+atlantis: 
+  enable: false
+  serviceAccountName:
+
 # Calico Values
 calico:
   enable: false
