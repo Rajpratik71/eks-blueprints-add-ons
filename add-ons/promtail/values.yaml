@@ -1,0 +1,7 @@
+promtail:
+  nodeSelector:
+    kubernetes.io/os: linux
+
+  config:
+    clients:
+      - url: http://loki.loki.svc.cluster.local:3100/loki/api/v1/push
