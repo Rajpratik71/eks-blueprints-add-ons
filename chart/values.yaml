@@ -196,6 +196,9 @@ kubernetesDashboard:
   enable: false
   serviceAccountName:
 
+secretStoreCsiDriver:
+  enable: false
+
 # promtail Values
 promtail:
   enable: false
