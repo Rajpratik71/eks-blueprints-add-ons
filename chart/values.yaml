@@ -79,6 +79,10 @@ awsOtelCollector:
   otlpEndpoint:
   resourceAttributes:
 
+# AWS CSI secrets provider
+awsCsiProvider:
+  enable: false
+
 # Cert Manager Values
 certManager:
   enable: false
