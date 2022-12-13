@@ -107,6 +107,13 @@ grafana:
   serviceAccount:
     create: false
 
+# Ingress Initialization Values
+ingressInitialization:
+  enable: false
+  email:
+  http_tg_arn:
+  https_tg_arn:
+
 # Vault default Values
 vault:
   enable: false
