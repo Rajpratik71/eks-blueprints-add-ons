@@ -165,6 +165,10 @@ prometheus:
   roleArn:
   ampWorkspaceUrl:
 
+# Rancher Values
+rancher:
+  enable: false
+
 # Spark Operator Values
 sparkOperator:
   enable: false
