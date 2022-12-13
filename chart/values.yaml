@@ -107,6 +107,13 @@ grafana:
   serviceAccount:
     create: false
 
+# Ingress Initialization Values
+ingressInitialization:
+  enable: false
+  email:
+  http_tg_arn:
+  https_tg_arn:
+
 # Karpenter Values
 karpenter:
   enable: false
@@ -153,6 +160,10 @@ prometheus:
   serviceAccountName:
   roleArn:
   ampWorkspaceUrl:
+
+# Rancher Values
+rancher:
+  enable: false
 
 # Spark Operator Values
 sparkOperator:
