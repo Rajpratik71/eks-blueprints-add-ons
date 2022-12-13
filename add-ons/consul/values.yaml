@@ -1,0 +1,5 @@
+consul:
+  global:
+    name: consul
+  controller:
+    enabled: true
