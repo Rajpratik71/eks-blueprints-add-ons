@@ -5,6 +5,22 @@ region: ''
 account: ''
 clusterName: ''
 
+# Consul Values
+consul: 
+  enable: true
+
+# Grafana Values
+grafana: 
+  enable: false
+
+# Promtail Values
+promtail: 
+  enable: true 
+
+# Loki Values
+loki: 
+  enable: true 
+
 # Agones Values
 agones:
   enable: false
